@@ -10,7 +10,7 @@ class App extends Component {
         <div className="left-scene">
           <SearchBar />
           <div className="selected-gif">
-            <Gif />
+            <Gif id="xT9IgDEI1iZyb2wqo8" />
           </div>
         </div>
         <div className="right-scene">there friend</div>
