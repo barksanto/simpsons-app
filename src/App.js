@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import SearchBar from './components/search_bar'
 import Gif from './components/gif'
 import GifList from './components/gif_list'
+import giphy from 'giphy-api'
 
 class App extends Component {
   constructor(props) {
@@ -12,8 +13,22 @@ class App extends Component {
       gifs: [],
       selectedGifId: "xT9IgDEI1iZyb2wqo8"
     }
+    this.search('homer thinking');
   }
 
+  search = (query) => {
+    // TODO: API call
+    giphy('HMO5ACcoAHDTdcKnJYtP7tD9neU7DIAu').search({
+      q: query,
+      rating: 'g',
+      limit: 10
+    }, (error, result) => {
+      // result contains gif data!
+      this.setState({
+        gifs: result.data
+      });
+    });
+  }
 
   render() {
     const gifs = [
@@ -30,7 +45,7 @@ class App extends Component {
           </div>
         </div>
         <div className="right-scene">
-          <GifList gifs={gifs} />
+          <GifList gifs={this.state.gifs} />
         </div>
       </div>
     )
