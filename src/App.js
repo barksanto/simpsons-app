@@ -2,6 +2,7 @@ import './App.css';
 import React, { Component } from 'react'
 import SearchBar from './components/search_bar'
 import Gif from './components/gif'
+import GifList from './components/gif_list'
 
 class App extends Component {
   render() {
