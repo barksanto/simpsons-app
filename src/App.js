@@ -39,7 +39,9 @@ class App extends Component {
     return (
       <div>
         <div className="left-scene">
-          <SearchBar />
+          {/* we pass the search function - the app will pass to its child searchbar   */}
+          {/* a prop named search which contains the search function defined in app.js */}
+          <SearchBar search={this.search} />
           <div className="selected-gif">
             <Gif id={this.state.selectedGifId} />
           </div>
