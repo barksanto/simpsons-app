@@ -1,21 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
-import React, {Component} from 'react'
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <h1>hello</h1>
-//     </div>
-//   );
-// }
+import React, { Component } from 'react'
+import SearchBar from './components/search_bar'
 
 class App extends Component {
   render() {
     return (
       <div>
-        <div className="left-scene"></div>
-        <div className="right-scene"></div>
+        <div className="left-scene">
+          <SearchBar />
+        </div>
+        <div className="right-scene">there friend</div>
       </div>
     )
   }

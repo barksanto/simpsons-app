@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import SearchBar from './components/search_bar';
 
 ReactDOM.render(
   <React.StrictMode>
